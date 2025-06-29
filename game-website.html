@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Schoolbell&family=ZCOOL+KuaiLe&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Besley&display=swap');
+
+        :root {
+            --logo: 'Pacifico', cursive;
+            --game-font: 'ZCOOL KuaiLe', cursive;
+            --sub-font: 'Schoolbell', cursive;
+            --roboto: 'Roboto', sans-serif;
+            --noto-sans: 'Besley', serif;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            color: rgb(255, 255, 255);
+            font-family: var(--logo);
+            font-size: 30px;
+
+
+        }
+
+        .background {
+            background-image: url('images/Clothes.png');
+            background-size: cover;
+            height: 700px;
+            width: 100%;
+            position: relative;
+        }
+
+        .pikachu {
+            height: 570px;
+            width: 55%;
+            background-image: url(images/Detective_Pikachu.png);
+            background-size: 750px;
+            background-repeat: no-repeat;
+            background-position: -26px -16px;
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            /* border: 2px solid black; */
+        }
+
+        .header-logo {
+            display: inline-block;
+            padding: 10px 17px;
+            border-bottom-left-radius: 17px;
+            border-bottom-right-radius: 17px;
+            border-left: 2px solid rgb(224, 5, 5);
+            border-bottom: 2px solid rgb(224, 5, 5);
+            border-right: 2px solid rgb(224, 5, 5);
+            margin-left: 13%;
+            background-color: rgb(224, 5, 5);
+        }
+
+
+        .header-2 {
+            border-bottom-left-radius: 17px;
+            border-bottom-right-radius: 17px;
+
+            float: right;
+            /* padding: 10px; */
+            margin-right: 10%;
+            background-color: white;
+        }
+
+        .header-options {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 18px;
+            color: white;
+            border: 2px solid transparent;
+            padding: 21px;
+            /* background-color: white; */
+            color: black;
+
+        }
+
+        .header-options:hover {
+            background-color: rgb(224, 5, 5);
+            color: white;
+            border-bottom: 2px solid rgb(224, 5, 5);
+        }
+
+        .heading-box {
+            /* border: 2px solid green; */
+            font-weight: 0;
+            margin-top: 12%;
+        }
+
+        .heading {
+            font-size: 60px;
+            padding-left: 20px;
+            font-family: var(--game-font);
+            color: rgb(31, 2, 83);
+        }
+
+        .heading-2 {
+            font-size: 25px;
+            padding-left: 115px;
+            font-family: var(--sub-font);
+            color: rgb(31, 2, 83);
+        }
+
+
+
+        .app-store {
+            height: 60px;
+            margin-top: 6%;
+            margin-right: 15px;
+            margin-left: 6%;
+        }
+
+        .play-store {
+            height: 70px;
+            bottom: -2px;
+            position: absolute;
+        }
+
+        .category-boxes {
+            display: flex;
+            /* border: 2px solid green; */
+            flex-flow: row wrap;
+            justify-content: space-around;
+            position: absolute;
+            width: 100%;
+            top: 590px;
+
+
+        }
+
+        .box1 {
+            display: inline-block;
+            /* border: 2px solid rgb(21, 70, 206); */
+            border-radius: 15px;
+            box-sizing: border-box;
+            transition: 0.1s transform ease-in-out;
+
+        }
+
+        .box1:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .box2 {
+            display: inline-block;
+            /* border: 2px solid rgb(0, 255, 0); */
+            border-radius: 15px;
+            /* background-image: linear-gradient(to right, red, yellow); */
+
+        }
+
+        .box3 {
+            display: inline-block;
+            /* border: 2px solid rgb(0, 255, 0); */
+            border-radius: 15px;
+            border-radius: 15px;
+
+
+        }
+
+        .box4 {
+            display: inline-block;
+            /* border: 2px solid rgb(0, 255, 0); */
+            border-radius: 15px;
+
+
+        }
+
+        .box-image {
+            height: 280px;
+            border-radius: 15px;
+            width: 210px;
+            object-fit: cover;
+            transition: 0.1s transform ease-in-out;
+            box-sizing: border-box;
+        }
+
+        .box-image:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .about-box {
+            /* border: 2px solid green; */
+            margin-top: 25%;
+
+        }
+
+        .about {
+            /* border: 2px solid blue;             */
+            text-align: center;
+
+        }
+
+        .about-text {
+            /* border: 2px solid red; */
+            font-family: 'Roboto';
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .about-heading {
+            /* border: wpx solid violet; */
+            font-size: 40px;
+            padding: 0px 260px;
+            font-family: var(--noto-sans);
+            color: rgb(56, 53, 92);
+
+        }
+
+        .about-heading-paragraph {
+            /* border: 2px solid rgb(0, 217, 255); */
+            padding: 0px 245px;
+            font-size: 20px;
+            font-family: var(--roboto);
+            font-weight: 200;
+            margin-top: 15px;
+        }
+
+        .button {
+            font-size: 20px;
+            padding: 14px;
+            font-family: var(--roboto);
+            font-weight: 900;
+            background-color: rgb(224, 5, 5);
+            color: rgb(255, 255, 255);
+            margin-top: 30px;
+            border: 1px solid #e00505;
+            border-radius: 13px;
+        }
+
+        .button:hover {
+            color: rgb(55, 45, 68);
+            background-color: rgb(169 205 240);
+            border: 1px solid rgb(55, 45, 68);
+        }
+
+        .image {
+            /* border: 2px solid red; */
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .fortnite {
+            height: 343px;
+            border-radius: 15px;
+
+        }
+
+        .overlay-image {
+            height: 120px;
+            position: absolute;
+            left: 22%;
+            top: 69%;
+        }
+
+
+
+        .game-boxes {
+            /* border-radius: 20px; */
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            margin-top: 20px;
+            /* background-image: url(https://i.pinimg.com/originals/3e/16/03/3e1603bbeb8db6a4581096e8b0bb2782.jpg); */
+            /* backface-visibility: 30%; */
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0px -50px;
+            padding: 50px;
+        }
+
+        .game1 {
+            /* border: 2px solid green; */
+            box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.308);
+            position: relative;
+            margin-top: 30px;
+            padding: 20px;
+            width: 30%;
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        .game2 {
+            /* border: 2px solid red; */
+            box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.315);
+            position: relative;
+            margin-top: 30px;
+            padding: 20px;
+            width: 30%;
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        .game {
+            height: 100px;
+            text-align: center;
+            border-radius: 20px;
+
+        }
+
+        .game-name {
+            font-size: 20px;
+            text-align: center;
+            font-family: sans-serif;
+
+        }
+
+        .game-category {
+            font-size: 12px;
+            font-family: var(--roboto);
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 2px 5px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .game-category:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .game-description {
+            padding: 0px 50px;
+            text-align: center;
+            font-family: var(--roboto);
+            font-weight: 900;
+            color: rgb(41, 53, 67);
+        }
+
+        .about-box2 {
+            margin-top: 10%;
+        }
+    </style>
+</head>
+
+<body
+    style="background-color: #ebfbff;  background-image: radial-gradient(circle, rgb(0 101 216 / 29%) , rgb(192 182 202));">
+
+    <div class="background">
+
+        <div class="pikachu"> </div>
+        <div class="header-logo">
+            <p class="logo"> Techy Loop </p>
+        </div>
+
+        <div class="header-2">
+            <p class="header-options"
+                style=" color: white; background-color: rgb(224, 5, 5); border-bottom-left-radius: 15px; border: 2px solid rgb(224, 5, 5);">
+                Home </p>
+            <p class="header-options"> Games </p>
+            <p class="header-options"> Careers </p>
+            <p class="header-options"> About </p>
+            <p class="header-options" style="border-bottom-right-radius: 15px;"> Contacts </p>
+        </div>
+
+
+        <div class="heading-box">
+            <p class="heading"> Made to Be played </p>
+            <p class="heading-2"> The Very Best in Mobile Gaming </p>
+        </div>
+
+        <div class="play-store-box" style="position: relative; ">
+            <a href="https://www.apple.com/in/app-store/">
+                <img src="images/640px-Download_on_the_App_Store_Badge.svg.png" alt="get it on app store"
+                    class="app-store">
+            </a>
+
+            <a href="https://play.google.com/">
+                <img
+                    src="images/png-transparent-google-play-mobile-phones-google-search-google-text-logo-sign-removebg-preview.png" height="80px">
+            </a>
+        </div>
+    </div>
+
+
+    <div class="category-boxes">
+        <div class="box1">
+            <a href="https://www.leagueoflegends.com/en-gb/">
+                <img src="https://w0.peakpx.com/wallpaper/579/721/HD-wallpaper-kda-akali-artwork-akali-league-of-legends-league-of-legends-games-deviantart.jpg"
+                    alt="naruto" class="box-image">
+            </a>
+        </div>
+
+        <div class="box2">
+            <a href="https://www.battlegroundsmobileindia.com/">
+                <img src="https://i.pinimg.com/originals/51/bd/66/51bd667f8d0d9684027fa02e2a711524.jpg" alt="naruto"
+                    class="box-image">
+            </a>
+        </div>
+
+        <div class="box3">
+            <a href="https://playvalorant.com/en-gb/">
+                <img src="https://play-lh.googleusercontent.com/hEQDYRyn7IaO6SkeYQEGCG7gqPxWvPaS6blpd3pCebjRlTT2AtzEacbEMrM5Jmt92roL=rw-w250"
+                    alt="naruto" class="box-image">
+            </a>
+        </div>
+
+        <div class="box4">
+            <a href="https://www.epicgames.com/fortnite/en-US/home">
+                <img src="https://a-static.besthdwallpaper.com/d-va-fantasy-art-overwatch-video-game-wallpaper-1024x576-66803_44.jpg"
+                    alt="naruto" class="box-image">
+            </a>
+
+        </div>
+    </div>
+
+    <!-- 2nd section  -->
+
+    <div class="about-box">
+        <div class="about">
+            <p class="about-text"> About Techy </p>
+            <h1 class="about-heading"> Your Source For Mobile Entertainment </h1>
+            <p class="about-heading-paragraph"> I'm a paragraph. Click here to add your own text and edit me. It’s easy.
+                Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a
+                great place for you to tell a story and let your users know a little more about you. </p>
+            <button class="button"> Learn More </button>
+        </div>
+
+        <div class="image">
+            <img class="fortnite" src="https://www.meme-arsenal.com/memes/42af7481a794082da25d655d7942c2fd.jpg"
+                alt="fortnite">
+            <img class="overlay-image" src="https://i.redd.it/2ldt6qeqrya11.png" alt="transparent-character">
+        </div>
+
+    </div>
+
+    <!-- 3rd section  -->
+
+    <div class="about-box2">
+        <div class="about">
+            <!-- <p class="about-text"> About Techy </p> -->
+            <h1 class="about-heading"> Our Games </h1>
+            <p class="about-heading-paragraph">I'm a paragraph. Click here to add your own text and edit me. I’m a great
+                place for you to tell a story and let your users know a little more about you. </p>
+        </div>
+
+        <div class="game-boxes">
+            <div class="game1">
+                <a href="https://play.google.com/store/apps/details?id=com.nexon.konosuba&hl=en_IN&gl=US">
+                    <center> <img class="game"
+                            src="https://www.seekpng.com/png/detail/79-792446_2d-game-character-png.png"
+                            alt="game-logo">
+                    </center>
+                </a>
+
+                <h1 class="game-name"> Kipooooon </h1>
+                <center>
+                    <h1 class="game-category"> Casual </h1>
+                </center>
+
+
+                <p class="game-description"> I'm a paragraph. Click here to add your own text and edit me. I’m a great
+                    place for you to tell a story and let your users know a little more about you. </p>
+            </div>
+
+
+
+            <!-- <div class="game2">
+    <img class ="game" src="https://i.redd.it/2ldt6qeqrya11.png" alt="transparent-character">
+    </div>/ -->
+
+            <div class="game2">
+                <a href="https://avengers.square-enix-games.com/en-us/">
+                    <center> <img class="game" src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/24754.png"
+                            alt="game-logo">
+                    </center>
+                </a>
+
+                <h1 class="game-name"> Avengers game </h1>
+                <center>
+                    <h1 class="game-category"> Fight </h1>
+                </center>
+
+
+                <p class="game-description"> I'm a paragraph. Click here to add your own text and edit me. I’m a great
+                    place for you to tell a story and let your users know a little more about you. </p>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
